@@ -1,0 +1,31 @@
+<section class="seccionCrear">
+  <form [formGroup]="form" (submit)="edit ? updateProduct() : submitProduct()" action="">
+    <input type="text" formControlName="name" name="name" class="form-control" placeholder="Product Name" autofocus>
+    <!-- Input name validation -->
+    <div *ngIf="nameControl.invalid && (nameControl.touched || nameControl.dirty)">
+      <p *ngIf="nameControl.hasError('required')">Campo Obligatorio</p>
+    </div>
+    <!-- END -->
+    <input type="text" formControlName="description" name="description" class="form-control" placeholder="Description">
+    <!-- Input description validation -->
+    <div *ngIf="descriptionControl.invalid && (descriptionControl.touched || descriptionControl.dirty)">
+      <p *ngIf="descriptionControl.hasError('required')">Campo Obligatorio</p>
+    </div>
+    <!-- END -->
+    <input type="text" formControlName="price" name="price" class="form-control" placeholder="Price">
+    <!-- Input price validation -->
+    <div *ngIf="priceControl.invalid && (priceControl.touched || priceControl.dirty)">
+      <p *ngIf="priceControl.hasError('required')">Campo Obligatorio</p>
+    </div>
+    <!-- END -->
+    <input type="text" formControlName="imageURL" name="imageURL" class="form-control" placeholder="Image URL">
+    <!-- Input ImageURL validation -->
+    <div *ngIf="imageURLControl.invalid && (imageURLControl.touched || imageURLControl.dirty)">
+      <p *ngIf="imageURLControl.hasError('required')">Campo Obligatorio</p>
+    </div>
+    <!-- END -->
+    <button [disabled]="form.invalid" class="btn btn-primary btn-block">
+      Save
+    </button>
+  </form>
+</section>

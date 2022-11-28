@@ -1,0 +1,80 @@
+// Fonts
+
+$font-nunito: 'Nunito Sans';
+
+// Colores
+
+$grisPunto: #BFBFBF;
+$grisLine: #C0C0C0;
+$blancoNov: #F2F2F2;
+$grisLetras: #585858;
+$grisTitle: #333333;
+$negro: #000000;
+$blanco: #FFFFFF;
+$grisCard: #E6E8EA;
+$rosadoOff: #F8475F;
+$letrasCard: #7A7A7A;
+$grisSlide: #BDBDBD;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: $font-nunito;
+  color: $negro;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+ul {
+  padding: 0;
+}
+
+
+
+.d-flex {
+  display: flex;
+}
+
+.spaceAround {
+  justify-content: space-around;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.ng-touched.ng-invalid:is(input, textarea),
+.ng-dirty.ng-invalid:is(input, textarea) {
+  outline: 2px solid #bd0c0c;
+}
+
+.ng-dirty.ng-pending:is(input, textarea) {
+  outline: 2px solid #838a2a;
+}

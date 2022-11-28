@@ -1,0 +1,46 @@
+<section>
+  <form class="formularioPractice" [formGroup]="form" (submit)="submit()">
+    <label for="">Rango</label>
+    <input type="range" formControlName="rango" min="50000" max="500000" step="100" value="250000">
+    <!-- Input range validation -->
+    <label for="">Elige fecha</label>
+
+    <div *ngIf="rangoControl.invalid && (rangoControl.touched || rangoControl.dirty)">
+      <p *ngIf="rangoControl.hasError('required')">Campo Obligatorio</p>
+    </div>
+    <!-- end -->
+    <input type="datetime-local" formControlName="datetime" id="datetime">
+    <!-- Input dateTime validation -->
+    <div *ngIf="datetimeControl.invalid && (datetimeControl.touched || datetimeControl.dirty)">
+      <p *ngIf="datetimeControl.hasError('required')">Campo Obligatorio</p>
+    </div>
+    <!-- end -->
+    <label for="">Elige Color</label>
+    <input type="color" formControlName="color" id="color">
+    <!-- Input color validation -->
+    <div *ngIf="colorControl.invalid && (colorControl.touched || colorControl.dirty)">
+      <p *ngIf="colorControl.hasError('required')">Campo Obligatorio</p>
+    </div>
+    <!-- end -->
+    <input type="email" id="email" formControlName="email" placeholder="Ingrese email">
+    <!-- Input email validation -->
+    <div *ngIf="emailControl.invalid && (emailControl.touched || emailControl.dirty)">
+      <p *ngIf="emailControl.hasError('required')">Campo Obligatorio</p>
+      <p *ngIf="emailControl.hasError('email')">Email no válido</p>
+    </div>
+    <!-- end -->
+    <div class="btnCheck">
+      <label for="">is checked?</label>
+      <input type="checkbox" id="checkbox " formControlName="checkbox" checked>
+    </div>
+
+    <!-- Input checkbox validation -->
+    <div *ngIf="checkboxControl.invalid && (checkboxControl.touched || checkboxControl.dirty)">
+      <p *ngIf="checkboxControl.hasError('required')">Campo Obligatorio</p>
+    </div>
+
+    <button [disabled]="form.invalid">Enviar</button>
+  </form>
+  <p class="output" style="font-size: 2rem;">{{form.value | json}}</p>
+
+</section>

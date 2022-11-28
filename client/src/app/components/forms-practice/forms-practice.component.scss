@@ -1,0 +1,46 @@
+.formularioPractice {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ccc;
+  background-color: rgb(0, 0, 0);
+  margin-top: 3%;
+  color: white;
+  font-size: 2rem;
+
+  input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+
+.btnCheck {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  background-color: rgb(0, 0, 0);
+  color: white;
+
+}
+
+
+.output {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+}

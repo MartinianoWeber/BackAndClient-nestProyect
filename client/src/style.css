@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Nunito Sans";
+  color: #000000;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.spaceAround {
+  justify-content: space-around;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
