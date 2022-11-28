@@ -6,6 +6,7 @@ import { ProductService } from './product.service';
 
 @Module({
   imports: [
+    // importamos el esquema de la base de datos
     MongooseModule.forFeature([{ name: 'Product', schema: ProductSchema }]),
   ],
   controllers: [ProductController],
